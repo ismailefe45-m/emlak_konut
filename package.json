@@ -1,0 +1,19 @@
+{
+  "name": "emlak-ai",
+  "version": "1.0.0",
+  "description": "AI-powered real estate valuation engine for Turkey",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.7",
+    "@turf/turf": "^7.1.0",
+    "cheerio": "^1.0.0"
+  },
+  "keywords": ["real-estate", "valuation", "turkey", "ai"],
+  "license": "MIT"
+}

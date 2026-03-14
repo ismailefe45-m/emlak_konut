@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EmlakAI — Yapay zeka destekli gayrimenkul değerleme. Deprem riski, fay hattı mesafesi ve zemin analizi ile şeffaf emlak değerlemesi.">
+  <title>EmlakAI — Akıllı Gayrimenkul Değerleme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ─── Background Effects ─── -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- ─── Header ─── -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 2L2 12h4v12h6v-8h4v8h6V12h4L14 2z" fill="url(#logoGrad)" />
+            <defs><linearGradient id="logoGrad" x1="2" y1="2" x2="26" y2="26">
+              <stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/>
+            </linearGradient></defs>
+          </svg>
+        </div>
+        <span class="logo-text">Emlak<span class="logo-accent">AI</span></span>
+      </div>
+      <p class="header-tagline">Yapay Zeka Destekli Gayrimenkul Değerleme</p>
+    </div>
+  </header>
+
+  <!-- ─── Main Content ─── -->
+  <main class="main">
+
+    <!-- ─── Form Section ─── -->
+    <section class="form-section" id="formSection">
+      <div class="section-header">
+        <h1>Mülk Değerleme</h1>
+        <p>Mülk bilgilerinizi girin, yapay zeka destekli motorumuz kapsamlı bir değerleme analizi üretsin.</p>
+      </div>
+
+      <form id="valuationForm" class="form" novalidate>
+
+        <!-- Group: Area & Rooms -->
+        <div class="form-group-title">
+          <div class="group-icon">📐</div>
+          <span>Alan & Oda Bilgileri</span>
+        </div>
+        <div class="form-row three-col">
+          <div class="field">
+            <label for="grossSqm">Brüt m²</label>
+            <input type="number" id="grossSqm" name="grossSqm" placeholder="120" min="1" required>
+          </div>
+          <div class="field">
+            <label for="netSqm">Net m²</label>
+            <input type="number" id="netSqm" name="netSqm" placeholder="100" min="1" required>
+          </div>
+          <div class="field">
+            <label for="rooms">Oda Sayısı</label>
+            <select id="rooms" name="rooms" required>
+              <option value="">Seçin</option>
+              <option value="1+0">1+0 (Stüdyo)</option>
+              <option value="1+1">1+1</option>
+              <option value="2+1">2+1</option>
+              <option value="3+1" selected>3+1</option>
+              <option value="3+2">3+2</option>
+              <option value="4+1">4+1</option>
+              <option value="4+2">4+2</option>
+              <option value="5+1">5+1</option>
+              <option value="5+2">5+2</option>
+              <option value="6+">6+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Group: Building -->
+        <div class="form-group-title">
+          <div class="group-icon">🏢</div>
+          <span>Bina Bilgileri</span>
+        </div>
+        <div class="form-row three-col">
+          <div class="field">
+            <label for="floor">Bulunduğu Kat</label>
+            <input type="number" id="floor" name="floor" placeholder="5" min="0" required>
+          </div>
+          <div class="field">
+            <label for="totalFloors">Toplam Kat</label>
+            <input type="number" id="totalFloors" name="totalFloors" placeholder="10" min="1" required>
+          </div>
+          <div class="field">
+            <label for="buildingAge">Bina Yaşı</label>
+            <input type="number" id="buildingAge" name="buildingAge" placeholder="8" min="0" required>
+          </div>
+        </div>
+
+        <!-- Group: Features -->
+        <div class="form-group-title">
+          <div class="group-icon">✨</div>
+          <span>Özellikler</span>
+        </div>
+        <div class="form-row two-col">
+          <div class="field">
+            <label for="facade">Cephe Yönü</label>
+            <select id="facade" name="facade">
+              <option value="south">Güney</option>
+              <option value="east">Doğu</option>
+              <option value="west">Batı</option>
+              <option value="north">Kuzey</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="viewType">Manzara</label>
+            <select id="viewType" name="viewType">
+              <option value="">Manzara Yok</option>
+              <option value="sea">Deniz Manzarası</option>
+              <option value="city">Şehir Manzarası</option>
+              <option value="garden">Bahçe / Yeşil Alan</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Group: Location -->
+        <div class="form-group-title">
+          <div class="group-icon">📍</div>
+          <span>Konum Bilgileri</span>
+        </div>
+        <div class="form-row two-col">
+          <div class="field">
+            <label for="district">İlçe</label>
+            <input type="text" id="district" name="district" placeholder="Kadıköy" required>
+          </div>
+          <div class="field">
+            <label for="neighborhood">Mahalle</label>
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Caferağa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="address">Tam Adres <span class="field-hint">(Konum tespiti için)</span></label>
+            <input type="text" id="address" name="address" placeholder="Moda Caddesi 15, Kadıköy, İstanbul">
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="btn-text">Mülkü Değerle</span>
+          <span class="btn-loader" id="btnLoader">
+            <span class="spinner"></span>
+            Analiz ediliyor...
+          </span>
+        </button>
+      </form>
+    </section>
+
+    <!-- ─── Results Section ─── -->
+    <section class="results-section hidden" id="resultsSection">
+      <div class="results-header">
+        <button class="btn-back" id="backBtn">← Yeni Değerleme</button>
+        <h2>Değerleme Sonucu</h2>
+      </div>
+
+      <!-- Main Value Card -->
+      <div class="value-card" id="valueCard">
+        <div class="value-label">Tahmini Değer</div>
+        <div class="value-amount" id="estimatedValue">—</div>
+        <div class="value-meta">
+          <div class="confidence-container">
+            <span class="confidence-label">Güven Oranı</span>
+            <div class="confidence-bar">
+              <div class="confidence-fill" id="confidenceFill"></div>
+            </div>
+            <span class="confidence-pct" id="confidencePct"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Badge -->
+      <div class="risk-section" id="riskSection">
+        <div class="risk-badge" id="riskBadge">
+          <div class="risk-icon" id="riskIcon"></div>
+          <div class="risk-info">
+            <div class="risk-title" id="riskTitle"></div>
+            <div class="risk-desc" id="riskDesc"></div>
+          </div>
+        </div>
+
+        <!-- Risk Detail Cards -->
+        <div class="risk-details" id="riskDetails">
+          <div class="risk-card" id="seismicCard">
+            <div class="risk-card-icon">🌍</div>
+            <div class="risk-card-title">Deprem Bölgesi</div>
+            <div class="risk-card-value" id="seismicValue">—</div>
+            <div class="risk-card-sub" id="seismicSub"></div>
+          </div>
+          <div class="risk-card" id="faultCard">
+            <div class="risk-card-icon">⚡</div>
+            <div class="risk-card-title">Fay Hattı Mesafesi</div>
+            <div class="risk-card-value" id="faultValue">—</div>
+            <div class="risk-card-sub" id="faultSub"></div>
+          </div>
+          <div class="risk-card" id="soilCard">
+            <div class="risk-card-icon">🪨</div>
+            <div class="risk-card-title">Zemin Sınıfı</div>
+            <div class="risk-card-value" id="soilValue">—</div>
+            <div class="risk-card-sub" id="soilSub"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enrichment Breakdown -->
+      <div class="breakdown-section">
+        <h3>Değerleme Detayları</h3>
+        <div class="breakdown-grid" id="breakdownGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Listing Data -->
+      <div class="listings-section" id="listingsSection">
+        <h3>Piyasa Verileri</h3>
+        <div class="listings-grid" id="listingsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Location Data -->
+      <div class="location-section" id="locationSection">
+        <h3>Konum Analizi</h3>
+        <div class="location-grid" id="locationGrid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── Error Toast ─── -->
+    <div class="toast hidden" id="errorToast">
+      <span class="toast-icon">⚠️</span>
+      <span class="toast-msg" id="errorMsg"></span>
+    </div>
+
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <p>EmlakAI © 2026 — Yapay Zeka Destekli Gayrimenkul Değerleme</p>
+    <p class="footer-note">Bu tahmin yatırım tavsiyesi niteliği taşımaz. Profesyonel değerleme için lisanslı bir ekspere danışın.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

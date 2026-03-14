@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "name": "MTA_Diri_Fay_Subset",
+  "description": "Simplified subset of MTA (Mineral Research and Exploration) active fault lines around the Marmara region. Replace with the full MTA diri fay shapefile for production use.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Kuzey Anadolu Fay Hattı (KAFH) - Marmara Segmenti", "type": "strike-slip", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [27.5, 40.7], [27.8, 40.72], [28.1, 40.73], [28.4, 40.72],
+          [28.7, 40.73], [28.85, 40.74], [29.0, 40.74], [29.15, 40.75],
+          [29.3, 40.76], [29.5, 40.78], [29.7, 40.80], [29.9, 40.82],
+          [30.1, 40.83], [30.4, 40.85], [30.7, 40.80], [31.0, 40.75]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kuzey Anadolu Fay Hattı - Kuzey Kol", "type": "strike-slip", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.6, 40.85], [28.8, 40.88], [29.0, 40.90], [29.2, 40.92],
+          [29.4, 40.93], [29.6, 40.95], [29.8, 40.97], [30.0, 40.98]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kuzey Anadolu Fay Hattı - Güney Kol", "type": "strike-slip", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.5, 40.55], [28.7, 40.53], [29.0, 40.52], [29.3, 40.55],
+          [29.5, 40.58], [29.7, 40.60], [30.0, 40.62]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çınarcık Fayı", "type": "normal", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [29.1, 40.68], [29.15, 40.65], [29.2, 40.63], [29.25, 40.60],
+          [29.3, 40.58]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Adalar Fayı", "type": "strike-slip", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.95, 40.82], [29.05, 40.83], [29.1, 40.84], [29.15, 40.85]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yeşilköy-Ambarlı Fayı", "type": "normal", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.75, 40.95], [28.78, 40.93], [28.82, 40.91], [28.85, 40.89]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Büyükçekmece Fayı", "type": "normal", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.55, 41.05], [28.58, 41.02], [28.60, 40.98], [28.62, 40.95]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Küçükçekmece Fayı", "type": "normal", "activity": "active" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [28.72, 41.02], [28.74, 40.99], [28.76, 40.96], [28.78, 40.93]
+        ]
+      }
+    }
+  ]
+}
