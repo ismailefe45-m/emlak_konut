@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🏠 EmlakAI — Akıllı Gayrimenkul Değerleme
 
@@ -10,7 +10,7 @@
 
 </div>
 
----
+--- 
 
 ## 📖 Proje Hakkında
 
@@ -374,4 +374,3 @@ Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır — detaylar için `LICE
 **EmlakAI** ile akıllı gayrimenkul değerlemesi yapın 🏠✨
 
 </div>
-]]>
