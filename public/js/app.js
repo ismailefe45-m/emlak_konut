@@ -1,5 +1,5 @@
 /**
- * ─── EmlakAI Frontend ───
+ * ─── EV360 Frontend ───
  * Form submission, API call, and rich results rendering.
  */
 

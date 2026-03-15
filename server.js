@@ -1,5 +1,5 @@
 /**
- * ─── EmlakAI Server ───
+ * ─── EV360 Server ───
  * Express entry point.
  * Serves the static frontend and mounts the API routes.
  */
@@ -30,7 +30,7 @@ app.get('*', (req, res) => {
 app.listen(config.port, () => {
   console.log(`
   ╔══════════════════════════════════════════════╗
-  ║   🏠 EmlakAI - Gayrimenkul Değerleme        ║
+  ║   🏠 EV360 - Gayrimenkul Değerleme          ║
   ║   Server running on port ${config.port}              ║
   ║   http://localhost:${config.port}                    ║
   ╚══════════════════════════════════════════════╝
