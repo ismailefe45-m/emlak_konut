@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
-   EmlakAI — Premium Dark-Mode UI
-   Glassmorphism | Gradient Accents | Risk Visualizations
+   EV360 — Premium Dark-Mode UI
+   Glassmorphism | Green Gradient Accents | Risk Visualizations
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Reset & Variables ── */
@@ -11,26 +11,26 @@
 }
 
 :root {
-  /* Brand */
-  --brand-primary: #6366f1;
-  --brand-secondary: #a855f7;
-  --brand-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-  --brand-glow: rgba(99, 102, 241, 0.3);
+  /* Brand — Green Theme */
+  --brand-primary: #22c55e;
+  --brand-secondary: #16a34a;
+  --brand-gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+  --brand-glow: rgba(34, 197, 94, 0.3);
 
   /* Surfaces */
-  --bg-base: #0a0a0f;
-  --bg-elevated: rgba(17, 17, 27, 0.85);
-  --bg-card: rgba(23, 23, 38, 0.7);
-  --bg-input: rgba(30, 30, 50, 0.6);
-  --bg-input-focus: rgba(40, 40, 65, 0.8);
+  --bg-base: #0a0f0a;
+  --bg-elevated: rgba(12, 20, 12, 0.85);
+  --bg-card: rgba(18, 30, 18, 0.7);
+  --bg-input: rgba(22, 38, 22, 0.6);
+  --bg-input-focus: rgba(30, 50, 30, 0.8);
 
   /* Border */
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(255, 255, 255, 0.12);
-  --border-brand: rgba(99, 102, 241, 0.3);
+  --border-brand: rgba(34, 197, 94, 0.3);
 
   /* Text */
-  --text-primary: #f0f0f5;
+  --text-primary: #f0f5f0;
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
 
@@ -66,7 +66,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Animated Background ── */
+/* ── Background Layers ── */
+
+/* Layer 1: Green abstract background (lowest) */
+.bg-layer-green {
+  position: fixed;
+  inset: 0;
+  background: url('/images/bg-green.png') center / cover no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Layer 2: Pattern overlay (full screen) */
+.bg-layer-pattern {
+  position: fixed;
+  inset: 0;
+  background: url('/images/bg-pattern.png') center / cover no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Layer 3: Grid pattern overlay */
 .bg-grid {
   position: fixed;
   inset: 0;
@@ -78,6 +100,7 @@ body {
   z-index: 0;
 }
 
+/* Layer 4: Animated glow blobs */
 .bg-glow {
   position: fixed;
   border-radius: 50%;
@@ -89,19 +112,19 @@ body {
 .bg-glow-1 {
   width: 500px; height: 500px;
   top: -100px; left: -50px;
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(34, 197, 94, 0.12);
   animation-delay: 0s;
 }
 .bg-glow-2 {
   width: 400px; height: 400px;
   top: 50%; right: -100px;
-  background: rgba(168, 85, 247, 0.10);
+  background: rgba(22, 163, 74, 0.10);
   animation-delay: -7s;
 }
 .bg-glow-3 {
   width: 350px; height: 350px;
   bottom: -50px; left: 30%;
-  background: rgba(236, 72, 153, 0.08);
+  background: rgba(21, 128, 61, 0.08);
   animation-delay: -14s;
 }
 
@@ -119,7 +142,7 @@ body {
   border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(10, 10, 15, 0.5);
+  background: rgba(10, 15, 10, 0.5);
 }
 
 .header-inner {
@@ -141,11 +164,11 @@ body {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(34, 197, 94, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 .logo-text {
@@ -291,7 +314,7 @@ body {
 }
 
 .field select option {
-  background: #1a1a2e;
+  background: #0f1f0f;
   color: var(--text-primary);
 }
 
@@ -335,7 +358,7 @@ body {
 
 .btn-submit:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
 }
 
 .btn-submit:active {
@@ -680,9 +703,9 @@ body {
   border-radius: 100px;
   font-size: 0.72rem;
   font-weight: 600;
-  background: rgba(99, 102, 241, 0.12);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(34, 197, 94, 0.12);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 .sentiment-pill.urgency {
